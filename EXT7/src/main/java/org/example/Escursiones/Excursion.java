@@ -23,18 +23,22 @@ public class Excursion {
     public void insertarProfesor(){
         System.out.println("Inserta el nombre del profesor/a para la excursion a " + getLocalidad());
         profesores.add(entry.next());
+        entry.nextLine();
     }
 
     public void inscribirAsistente(){
         System.out.println("Creando estudiante...");
         System.out.println("Insertar apellidos:");
-        String apellido = entry.next();
+        String apellido = entry.nextLine();
         System.out.println("Inserta el nombre:");
         String nombre = entry.next();
+        entry.nextLine();
         System.out.println("Inserta el curso:");
         String curso = entry.next();
+        entry.nextLine();
         System.out.println("Introduce su edad:");
         int edad = entry.nextInt();
+        entry.nextLine();
 
         int temp = listaAsistentes.size();
         listaAsistentes.add(new Estudiante(nombre,apellido,curso,edad));
